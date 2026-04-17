@@ -24,7 +24,7 @@ const Hero = async () => {
             Your personal shelf of meaningful connections. Browse, tend, and
             nurture the relationships that matter most.
           </p>
-          <button className="btn btn-success text-white">+ Add a Friend</button>
+          <button className="btn btn-success text-white">Add a Friend</button>
         </div>
 
         <div className="grid grid-rows-1 md:grid-cols-2 lg:grid-cols-4 gap-4 m-6 ">

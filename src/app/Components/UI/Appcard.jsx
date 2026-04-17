@@ -20,7 +20,7 @@ const AppCard = ({ friend }) => {
       <div className="card bg-white-900 w-96 shadow-lg">
         <figure className="pt-8">
           <div className="avatar">
-            <div className="w-24 h-24 rounded-full shadow-2xl">
+            <div className="w-24 h-24 rounded-full shadow-amber-950-">
               <Image
                 src={friend.picture}
                 alt={friend.name}

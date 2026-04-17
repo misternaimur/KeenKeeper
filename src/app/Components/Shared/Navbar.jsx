@@ -6,6 +6,12 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import logo from "../../../../assets/logo.png";
 import Image from "next/image";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faChartSimple,
+  faClockRotateLeft,
+  faHouse,
+} from "@fortawesome/free-solid-svg-icons";
 
 const Navbar = () => {
   const pathname = usePathname();
@@ -16,33 +22,42 @@ const Navbar = () => {
       : "btn btn-sm btn-ghost text-slate-700";
 
   return (
-    <header className="border-b border-slate-200 bg-white shadow-sm">
+    <header className="border-b border-slate-200 bg-white shadow-base-300">
       <div className="navbar container mx-auto">
-          <div className="flex-1">
+        <div className="flex-1">
           <Link href="/" className="inline-flex items-center">
             <Image src={logo} alt="Keen Keeper Logo" width={120} priority />
           </Link>
-          </div>
-          <div className="flex-none">
-            <ul className="menu menu-horizontal px-1">
-              <li>
-                <Link href="/" className={navLinkClass("/")}>
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link href="/apps/Timeline" className={navLinkClass("/apps/Timeline")}>
-                  Timeline
-                </Link>
-              </li>
-              <li>
-                <Link href="/apps/Status" className={navLinkClass("/apps/Status")}>
-                  Stats
-                </Link>
-              </li>
-            </ul>
-          </div>
         </div>
+        <div className="flex-none">
+          <ul className="menu menu-horizontal px-1">
+            <li>
+              <Link href="/" className={navLinkClass("/")}>
+                <FontAwesomeIcon icon={faHouse} />
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/apps/Timeline"
+                className={navLinkClass("/apps/Timeline")}
+              >
+                <FontAwesomeIcon icon={faClockRotateLeft} />
+                Timeline
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/apps/Status"
+                className={navLinkClass("/apps/Status")}
+              >
+                <FontAwesomeIcon icon={faChartSimple} />
+                Stats
+              </Link>
+            </li>
+          </ul>
+        </div>
+      </div>
     </header>
   );
 };
