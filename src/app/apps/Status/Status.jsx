@@ -9,7 +9,7 @@ const storageKey = "keenkeeper_timeline";
 
 const types = ["Call", "Text", "Video"];
 
-const colors = ["#ff0000", "#0aff4b", "#cc00ff"];
+const colors = ["#0e3b00", "#0aff4b", "#cc00ff"];
 
 const Stats = () => {
   const [entries, setEntries] = useState([]);
