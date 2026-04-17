@@ -52,33 +52,6 @@ export default async function FriendDetailsPage({ params }) {
         ? "bg-emerald-100 text-emerald-700"
         : "bg-amber-100 text-amber-700";
 
-  const recentInteractions = [
-    {
-      type: "Text",
-      title: "Asked for career advice",
-      date: "Jan 28, 2026",
-      icon: faCommentDots,
-    },
-    {
-      type: "Call",
-      title: "Industry conference meetup",
-      date: "Jan 22, 2026",
-      icon: faPhone,
-    },
-    {
-      type: "Video",
-      title: "Asked for career advice",
-      date: "Jan 18, 2026",
-      icon: faVideo,
-    },
-    {
-      type: "Note",
-      title: "Shared a quick life update",
-      date: "Jan 12, 2026",
-      icon: faFileLines,
-    },
-  ];
-
   return (
     <main className="mx-auto w-full max-w-7xl px-4 py-10">
       <div className="grid gap-6 lg:grid-cols-[320px_1fr]">
@@ -127,10 +100,7 @@ export default async function FriendDetailsPage({ params }) {
         </aside>
 
         {/* Interactive section with buttons and timeline - imported from separate client component */}
-        <InteractiveSection
-          friend={friend}
-          initialInteractions={recentInteractions}
-        />
+        <InteractiveSection friend={friend} />
       </div>
     </main>
   );

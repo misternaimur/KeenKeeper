@@ -12,9 +12,8 @@ import {
   faVideo,
 } from "@fortawesome/free-solid-svg-icons";
 
-export default function InteractiveSection({ friend, initialInteractions }) {
-  const [recentInteractions, setRecentInteractions] =
-    useState(initialInteractions);
+export default function InteractiveSection({ friend }) {
+  const [recentInteractions, setRecentInteractions] = useState([]);
 
   const saveToTimeline = (entry) => {
     if (typeof window === "undefined") {

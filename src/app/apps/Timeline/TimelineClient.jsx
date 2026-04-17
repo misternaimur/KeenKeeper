@@ -26,15 +26,29 @@ const typeBadgeMap = {
 };
 
 export default function TimelineClient() {
-  const [entries, setEntries] = useState([]);
-
-  useEffect(() => {
+  const [entries, setEntries] = useState(() => {
     try {
       const saved = JSON.parse(localStorage.getItem(storageKey) || "[]");
-      setEntries(Array.isArray(saved) ? saved : []);
+      return Array.isArray(saved) ? saved : [];
     } catch {
-      setEntries([]);
+      return [];
     }
+  });
+  const [activeFilter, setActiveFilter] = useState("All");
+
+  useEffect(() => {
+    const handleStorageChange = () => {
+      try {
+        const saved = JSON.parse(localStorage.getItem(storageKey) || "[]");
+        setEntries(Array.isArray(saved) ? saved : []);
+      } catch {
+        setEntries([]);
+      }
+    };
+
+    window.addEventListener("storage", handleStorageChange);
+
+    return () => window.removeEventListener("storage", handleStorageChange);
   }, []);
 
   const sortedEntries = useMemo(() => {
@@ -42,6 +56,16 @@ export default function TimelineClient() {
       return new Date(b.date).getTime() - new Date(a.date).getTime();
     });
   }, [entries]);
+
+  const filteredEntries = useMemo(() => {
+    if (activeFilter === "All") {
+      return sortedEntries;
+    }
+
+    return sortedEntries.filter((entry) => entry.type === activeFilter);
+  }, [activeFilter, sortedEntries]);
+
+  const filterOptions = ["All", "Call", "Text", "Video"];
 
   return (
     <section className="mx-auto w-full max-w-4xl space-y-6">
@@ -54,17 +78,36 @@ export default function TimelineClient() {
         </p>
       </header>
 
-      {sortedEntries.length === 0 ? (
+      <div className="flex items-center gap-3">
+        <label htmlFor="filter" className="text-sm font-medium text-slate-700">
+          Filter by:
+        </label>
+        <select
+          id="filter"
+          value={activeFilter}
+          onChange={(e) => setActiveFilter(e.target.value)}
+          className="rounded-md border border-slate-200 bg-white px-4 py-2 text-sm text-slate-900 shadow-sm focus:outline-none focus:ring-2 focus:ring-slate-900"
+        >
+          {filterOptions.map((option) => (
+            <option key={option} value={option}>
+              {option}
+            </option>
+          ))}
+        </select>
+      </div>
+
+      {filteredEntries.length === 0 ? (
         <div className="rounded-2xl border border-dashed border-slate-300 bg-slate-50 p-8 text-center text-slate-500">
-          No interactions yet. Go to a friend detail page and click Call, Text,
-          or Video.
+          {entries.length === 0
+            ? "No interactions yet. Go to a friend detail page and click Call, Text, or Video."
+            : "No entries match this filter."}
         </div>
       ) : (
         <div className="relative rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
           <div className="absolute bottom-8 left-10 top-8 w-px bg-slate-200" />
 
           <div className="space-y-5">
-            {sortedEntries.map((entry, index) => {
+            {filteredEntries.map((entry, index) => {
               const icon = typeIconMap[entry.type] || faCommentDots;
               const badgeClass =
                 typeBadgeMap[entry.type] || "bg-slate-100 text-slate-700";

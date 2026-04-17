@@ -30,7 +30,7 @@ const Navbar = () => {
           </Link>
         </div>
         <div className="flex-none">
-          <ul className="menu menu-horizontal px-1">
+          <ul className="menu menu-horizontal space-x-5 px-1">
             <li>
               <Link href="/" className={navLinkClass("/")}>
                 <FontAwesomeIcon icon={faHouse} />
