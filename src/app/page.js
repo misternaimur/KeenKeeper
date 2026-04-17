@@ -1,7 +1,12 @@
-import Image from "next/image";
+/** @format */
+
+import Header from "./Componets/Header";
+import NavBar from "./Componets/NavBar";
 
 export default function Home() {
   return (
-     <h1 className="text-2xl">Hello Naimur</h1>
+    <main>
+     
+    </main>
   );
 }
