@@ -1,5 +1,6 @@
 /** @format */
 
+import Link from "next/link";
 import AppCard from "./Components/UI/Appcard";
 import friends from "../../public/friends.json";
 
@@ -51,7 +52,13 @@ export default function Home() {
         <h2 className="mb-4 text-2xl font-bold text-slate-900">Your Friends</h2>
         <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
           {friends.map((friend) => (
-            <AppCard key={friend.id} friend={friend} />
+            <Link
+              key={friend.id}
+              href={`/Details/${friend.id}`}
+              className="block"
+            >
+              <AppCard friend={friend} />
+            </Link>
           ))}
         </div>
       </section>

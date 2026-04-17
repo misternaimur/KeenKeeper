@@ -16,8 +16,8 @@ const AppCard = ({ friend }) => {
   };
 
   return (
-    <div>
-      <div className="card bg-white-900 w-96 shadow-lg">
+    <div className="h-full">
+      <div className="card h-full w-full bg-white shadow-lg transition hover:-translate-y-0.5 hover:shadow-xl">
         <figure className="pt-8">
           <div className="avatar">
             <div className="w-24 h-24 rounded-full shadow-amber-950-">
