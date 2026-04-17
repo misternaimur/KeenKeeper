@@ -21,9 +21,9 @@ const Footer = () => {
       <nav className="text-white">
         <p>Social Media</p>
         <div className="grid grid-flow-col gap-4">
-             <Image src={ig} alt="Keen Keeper Logo" width={20} priority />
-             <Image src={x} alt="Keen Keeper Logo" width={20} priority />
-             <Image src={fb} alt="Keen Keeper Logo" width={20} priority />
+             <Image src={ig} alt="Keen Keeper Logo" width={50} priority />
+             <Image src={x} alt="Keen Keeper Logo" width={50} priority />
+             <Image src={fb} alt="Keen Keeper Logo" width={50} priority />
         </div>
       </nav>
       <aside className="text-white">

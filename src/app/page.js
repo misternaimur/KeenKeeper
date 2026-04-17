@@ -1,26 +1,36 @@
 /** @format */
 
 import Link from "next/link";
+import { readFile } from "fs/promises";
+import path from "path";
 import AppCard from "./Components/UI/Appcard";
-import friends from "../../public/friends.json";
 
-const stats = [
-  { value: friends.length, label: "Total Friends" },
-  {
-    value: friends.filter((friend) => friend.status === "on-track").length,
-    label: "On Track",
-  },
-  {
-    value: friends.filter((friend) => friend.status === "almost due").length,
-    label: "Need Attention",
-  },
-  {
-    value: friends.filter((friend) => friend.status === "overdue").length,
-    label: "Overdue",
-  },
-];
+async function getFriends() {
+  const filePath = path.join(process.cwd(), "public", "friends.json");
+  const fileContents = await readFile(filePath, "utf8");
 
-export default function Home() {
+  return JSON.parse(fileContents);
+}
+
+export default async function Home() {
+  const friends = await getFriends();
+
+  const stats = [
+    { value: friends.length, label: "Total Friends" },
+    {
+      value: friends.filter((friend) => friend.status === "on-track").length,
+      label: "On Track",
+    },
+    {
+      value: friends.filter((friend) => friend.status === "almost due").length,
+      label: "Need Attention",
+    },
+    {
+      value: friends.filter((friend) => friend.status === "overdue").length,
+      label: "Overdue",
+    },
+  ];
+
   return (
     <main className="mx-auto w-full max-w-7xl px-4 py-10">
       <section className="mb-10 rounded-2xl border border-slate-200 bg-white p-8 text-center shadow-sm">
