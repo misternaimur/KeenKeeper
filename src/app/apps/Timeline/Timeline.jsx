@@ -1,12 +1,13 @@
 /** @format */
 
-import React from "react";
+import TimelineClient from "./TimelineClient";
+
 export const metadata = {
-  title: "KeenKeeper-TimeLine",
+  title: "KeenKeeper | Timeline",
 };
 
 const Timeline = () => {
-  return <div>this is timeline</div>;
+  return <TimelineClient />;
 };
 
 export default Timeline;
