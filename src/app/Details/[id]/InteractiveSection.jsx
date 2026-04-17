@@ -111,7 +111,7 @@ export default function InteractiveSection({ friend }) {
         </div>
 
         <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
-          <div className="flex items-center justify-between gap-4">
+          <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
             <div>
               <h2 className="text-lg font-semibold text-slate-900">
                 Relationship Goal
@@ -131,7 +131,7 @@ export default function InteractiveSection({ friend }) {
           <h2 className="text-lg font-semibold text-slate-900">
             Quick Check-In
           </h2>
-          <div className="mt-4 grid grid-cols-3 gap-3">
+          <div className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-3">
             {checkInActions.map((action) => (
               <button
                 key={action.label}
@@ -146,7 +146,7 @@ export default function InteractiveSection({ friend }) {
         </div>
 
         <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
-          <div className="mb-5 flex items-center justify-between gap-4">
+          <div className="mb-5 flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
             <h2 className="text-lg font-semibold text-slate-900">
               Recent Interactions
             </h2>
@@ -160,7 +160,7 @@ export default function InteractiveSection({ friend }) {
             {recentInteractions.map((item, index) => (
               <div
                 key={`${item.type}-${item.date}-${index}`}
-                className="flex items-center justify-between gap-4 border-b border-slate-100 pb-4 last:border-b-0 last:pb-0"
+                className="flex flex-col items-start justify-between gap-3 border-b border-slate-100 pb-4 last:border-b-0 last:pb-0 sm:flex-row sm:items-center sm:gap-4"
               >
                 <div className="flex items-start gap-3">
                   <div className="rounded-lg bg-slate-100 p-3 text-slate-700">
@@ -171,7 +171,9 @@ export default function InteractiveSection({ friend }) {
                     <p className="text-sm text-slate-500">{item.title}</p>
                   </div>
                 </div>
-                <p className="text-sm text-slate-400">{item.date}</p>
+                <p className="text-sm text-slate-400 sm:text-right">
+                  {item.date}
+                </p>
               </div>
             ))}
           </div>

@@ -23,14 +23,20 @@ const Navbar = () => {
 
   return (
     <header className="border-b border-slate-200 bg-white shadow-base-300">
-      <div className="navbar container mx-auto">
-        <div className="flex-1">
+      <div className="navbar container mx-auto flex-col gap-3 px-4 py-3 sm:flex-row sm:py-2">
+        <div className="flex-1 justify-center sm:justify-start">
           <Link href="/" className="inline-flex items-center">
-            <Image src={logo} alt="Keen Keeper Logo" width={120} priority />
+            <Image
+              src={logo}
+              alt="Keen Keeper Logo"
+              width={120}
+              className="h-auto w-24 sm:w-30"
+              priority
+            />
           </Link>
         </div>
-        <div className="flex-none">
-          <ul className="menu menu-horizontal space-x-5 px-1">
+        <div className="flex-none w-full sm:w-auto">
+          <ul className="menu menu-horizontal w-full justify-center gap-2 px-1 sm:gap-5">
             <li>
               <Link href="/" className={navLinkClass("/")}>
                 <FontAwesomeIcon icon={faHouse} />

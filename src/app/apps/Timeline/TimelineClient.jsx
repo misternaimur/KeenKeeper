@@ -78,7 +78,7 @@ export default function TimelineClient() {
         </p>
       </header>
 
-      <div className="flex items-center gap-3">
+      <div className="flex flex-col items-start gap-2 sm:flex-row sm:items-center sm:gap-3">
         <label htmlFor="filter" className="text-sm font-medium text-slate-700">
           Filter by:
         </label>
@@ -86,7 +86,7 @@ export default function TimelineClient() {
           id="filter"
           value={activeFilter}
           onChange={(e) => setActiveFilter(e.target.value)}
-          className="rounded-md border border-slate-200 bg-white px-4 py-2 text-sm text-slate-900 shadow-sm focus:outline-none focus:ring-2 focus:ring-slate-900"
+          className="w-full rounded-md border border-slate-200 bg-white px-4 py-2 text-sm text-slate-900 shadow-sm focus:outline-none focus:ring-2 focus:ring-slate-900 sm:w-auto"
         >
           {filterOptions.map((option) => (
             <option key={option} value={option}>
@@ -115,7 +115,7 @@ export default function TimelineClient() {
               return (
                 <article
                   key={`${entry.id}-${index}`}
-                  className="relative ml-4 grid gap-3 rounded-xl border border-slate-100 bg-slate-50 p-4 sm:grid-cols-[56px_1fr_auto] sm:items-center"
+                  className="relative ml-0 grid gap-3 rounded-xl border border-slate-100 bg-slate-50 p-4 sm:ml-4 sm:grid-cols-[56px_1fr_auto] sm:items-center"
                 >
                   <div className="z-10 flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-700 shadow-sm">
                     <FontAwesomeIcon icon={icon} />

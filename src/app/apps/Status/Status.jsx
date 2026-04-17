@@ -90,7 +90,7 @@ const Stats = () => {
           </div>
         )}
 
-        <div className="mt-2 flex items-center justify-center gap-5 text-xs text-black">
+        <div className="mt-2 flex flex-wrap items-center justify-center gap-5 text-xs text-black">
           {chartData.map((item) => (
             <div key={item.name} className="flex items-center gap-1">
               <span
