@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "name": "Sarah Mitchell",
+    "picture": "https://randomuser.me/api/portraits/women/12.jpg",
+    "email": "sarah.mitchell@gmail.com",
+    "days_since_contact": 18,
+    "status": "overdue",
+    "tags": ["college", "close friend"],
+    "bio": "Roommates freshman year. She moved to Vancouver after grad school but we try to video call regularly.",
+    "goal": 14,
+    "next_due_date": "2026-04-10"
+  },
+  {
+    "id": 2,
+    "name": "James Okafor",
+    "picture": "https://randomuser.me/api/portraits/men/34.jpg",
+    "email": "james.okafor@outlook.com",
+    "days_since_contact": 5,
+    "status": "on-track",
+    "tags": ["work", "mentor"],
+    "bio": "My manager at my first job. He taught me everything about backend development. Still grab coffee monthly.",
+    "goal": 30,
+    "next_due_date": "2026-05-01"
+  },
+  {
+    "id": 3,
+    "name": "Priya Nair",
+    "picture": "https://randomuser.me/api/portraits/women/45.jpg",
+    "email": "priya.nair@yahoo.com",
+    "days_since_contact": 27,
+    "status": "overdue",
+    "tags": ["childhood", "close friend"],
+    "bio": "Grew up next door to each other. She's now a pediatrician in Dhaka. We went to the same school for 10 years.",
+    "goal": 21,
+    "next_due_date": "2026-04-08"
+  },
+  {
+    "id": 4,
+    "name": "Carlos Rivera",
+    "picture": "https://randomuser.me/api/portraits/men/56.jpg",
+    "email": "carlos.rivera@protonmail.com",
+    "days_since_contact": 11,
+    "status": "almost due",
+    "tags": ["hobby", "gym"],
+    "bio": "Met at a powerlifting competition two years ago. We train together on weekends when schedules align.",
+    "goal": 14,
+    "next_due_date": "2026-04-17"
+  },
+  {
+    "id": 5,
+    "name": "Anika Hossain",
+    "picture": "https://randomuser.me/api/portraits/women/67.jpg",
+    "email": "anika.hossain@gmail.com",
+    "days_since_contact": 3,
+    "status": "on-track",
+    "tags": ["college", "study group"],
+    "bio": "We pulled countless all-nighters together during finals. She's doing her PhD in neuroscience now.",
+    "goal": 14,
+    "next_due_date": "2026-04-24"
+  },
+  {
+    "id": 6,
+    "name": "Tom Bergmann",
+    "picture": "https://randomuser.me/api/portraits/men/23.jpg",
+    "email": "tom.bergmann@icloud.com",
+    "days_since_contact": 44,
+    "status": "overdue",
+    "tags": ["travel", "adventure"],
+    "bio": "Met backpacking through Southeast Asia in 2022. We've kept in touch but life gets busy. Need to reconnect.",
+    "goal": 30,
+    "next_due_date": "2026-04-05"
+  },
+  {
+    "id": 7,
+    "name": "Fatima Al-Rashid",
+    "picture": "https://randomuser.me/api/portraits/women/89.jpg",
+    "email": "fatima.alrashid@gmail.com",
+    "days_since_contact": 8,
+    "status": "almost due",
+    "tags": ["work", "close friend"],
+    "bio": "Colleagues turned best friends. We left the same company the same week and have been cheering each other on since.",
+    "goal": 10,
+    "next_due_date": "2026-04-16"
+  },
+  {
+    "id": 8,
+    "name": "Liam Nguyen",
+    "picture": "https://randomuser.me/api/portraits/men/78.jpg",
+    "email": "liam.nguyen@hotmail.com",
+    "days_since_contact": 20,
+    "status": "on-track",
+    "tags": ["family friend", "neighbor"],
+    "bio": "Our families have been friends for decades. He's like a cousin to me. We catch up every few weeks over games.",
+    "goal": 30,
+    "next_due_date": "2026-04-28"
+  },
+  {
+    "id": 9,
+    "name": "Ridoy",
+    "picture": "https://randomuser.me/api/portraits/men/50.jpg",
+    "email": "ridoy@hotmail.com",
+    "days_since_contact": 19,
+    "status": "almost due",
+    "tags": ["family friend", "close friend"],
+    "bio": "Our families have been friends for decades. He's like a cousin to me. We catch up every few weeks over games.",
+    "goal": 35,
+    "next_due_date": "2026-04-30"
+  },
+   {
+    "id": 10,
+    "name": "Rashidiya",
+    "picture": "https://randomuser.me/api/portraits/women/50.jpg",
+    "email": "alrashidiya@gmail.com",
+    "days_since_contact": 21,
+    "status": "almost due",
+    "tags": ["work", "close friend"],
+    "bio": "Colleagues turned best friends. We left the same company the same week and have been cheering each other on since.",
+    "goal": 31,
+    "next_due_date": "2026-05-16"
+  }
+]
